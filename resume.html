@@ -6,11 +6,41 @@
                 text-align:center;
                 /* text-decoration: underline;*/
             }
-            table, th, td {
+            table {
                 border: 3px solid black;
                 text-align:center;
                 border-collapse: collapse; 
-                padding: 10px;
+                width:100%;
+            }
+            th {
+                border: 3px solid black;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            td {
+                border: 3px solid black;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            ul {
+                padding:10px;
+            }
+            ol {
+                padding:10px;
+            }
+            body {
+                border:3px solid black;
+                padding:30px;
+            }
+            h3 {
+                background-color: lightgray;
+                width:130px;
+            }
+            /* #mail {
+                color: green;
+            } */
+            span {
+                color: blueviolet;
             }
         </style>
     </head>
@@ -18,11 +48,12 @@
         <h1>Resume</h1> <hr>
         <!--<h1 style="text-align:center;">Resume</h1>  -->
         <!-- <h1><u>Resume</u></h1> -->
-        <h3>Name: Anuska Ghosh</h3>
-        <h3>Email ID: anuskaghosh1709@gmail.com</h3>
-        <h3>Phone No: +91 8670290012</h3>
-        <h3>LinkedIn: linkedin.com/in/anuskaghosh</h3>
-        <h3>GitHub: github.com/anuskaghosh</h3>
+        <h4>Name: Anuska Ghosh</h4>
+        <h4>Email ID: <span>anuskaghosh1709@gmail.com</span></h4>
+        <!-- <h4 id="mail">Email ID: <span>anuskaghosh1709@gmail.com</span></h4> -->
+        <h4>Phone No: +91 8670290012</h4>
+        <h4>LinkedIn: linkedin.com/in/anuskaghosh</h4>
+        <h4>GitHub: github.com/anuskaghosh</h4>
         <hr>
         <h3><u>Objective:-</u></h3>
         <p>To secure a challenging position in a reputable organization to expand my learnings, knowledge, and skills.</p>
@@ -88,11 +119,8 @@
             <li>Certified Data Science Professional by XYZ Institute (2023)</li>
         </ul>
         <hr>
-        <h3 style="text-align:left;"><u>Date & Place:-</u></h3>
-        <h3 style="text-align:right;"><u>Signature:-</u></h3>
-        <p>7th January 2026.</p>
-        <p>Bengaluru, Karnataka</p>
-        <p style="text-align:right;">Anuska Ghosh</p>
-        <hr>
+        <h4>Date:_________________</h4>
+        <h4>Place:________________</h4>
+        <h4>Signature:______________</h4>
     </body>
 </HTML>
