@@ -1,0 +1,95 @@
+body {
+    background-color: #3b3b3b;
+    font-family: Arial;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+}
+
+.calc {
+    width: 300px;
+    margin: auto;
+    margin-top: 20px;
+    background: linear-gradient(#dcdcdc, #b8b8b8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px black;
+}
+
+.screen {
+    width: 260px;
+    height: 50px;
+    background: linear-gradient(white, #d9d9d9);
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    box-shadow: inset 0px 0px 8px gray;
+}
+
+/* ---------------- GRID ---------------- */
+
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+}
+
+/* ---------------- BUTTONS ---------------- */
+
+.btn {
+    background: linear-gradient(#ffffff, #e2e2e2);
+    height: 55px;
+    text-align: center;
+    line-height: 55px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 1px 1px 5px gray;
+}
+
+.operators {
+    background: linear-gradient(#474747, #222222);
+    color: white;
+    height: 55px;
+    text-align: center;
+    line-height: 55px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 1px 1px 5px black;
+}
+
+.equals {
+    background: linear-gradient(#3d3d3d, #202020);
+    color: white;
+    height: 55px;
+    text-align: center;
+    line-height: 55px;
+    border-radius: 6px;
+    font-size: 18px;
+    box-shadow: 1px 1px 5px black;
+}
+
+.clear {
+    background: linear-gradient(#ff4b4b, #a00000);
+    color: white;
+    height: 55px;
+    text-align: center;
+    line-height: 55px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 1px 1px 5px #3a3a3a;
+}
+
+/* Hover effect */
+.btn:hover,
+.operators:hover,
+.equals:hover,
+.clear:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 7px black;
+}

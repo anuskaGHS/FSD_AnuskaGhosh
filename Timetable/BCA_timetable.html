@@ -1,0 +1,131 @@
+<html>
+    <head>
+        <title>BCA TIME TABLE</title>
+        <style>
+            h1 {
+                text-align: center;
+                font-family: Arial;
+                margin-bottom: 10px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                font-family: Arial;
+                text-align: center;
+            }
+            th, td {
+                border: 3px solid black;
+                padding: 10px;
+                font-size: 14px;
+            }
+            th {
+                background-color: #f2f2f2;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <h1>BCA TIME TABLE</h1>
+
+        <table>
+            <tr>
+                <th>Sl.No</th>
+                <th>Date</th>
+                <th>Day</th>
+
+                <th>Session 1<br>08:00 - 08:55</th>
+                <th>Session 2<br>09:00 - 09:55</th>
+                <th>Session 3<br>10:00 - 10:55</th>
+                <th>Session 4<br>11:05 - 12:00</th>
+                <th>Session 5<br>12:05 - 13:00</th>
+                <th>Session 6<br>13:00 - 14:00</th>
+                <th>Session 7<br>14:10 - 15:05</th>
+            </tr>
+
+            <!-- MONDAY -->
+            <tr>
+                <td>1</td>
+                <td>05/01/2026</td>
+                <td>Monday</td>
+
+                <td><b>FSD (V-RKV)</b><br>LT 502</td>
+                <td><b>VI</b><br>LT 502</td>
+                <td></td>
+                <td><b>DWM</b><br>LT 502</td>
+                <td><b>NLP (V-NIG)</b><br>LT 502</td>
+
+                <td rowspan="5"><b>LUNCH</b><br><b>BREAK</b></td>
+
+                <td><b>AI (V-ABH)</b><br>LT 502</td>
+            </tr>
+
+            <!-- TUESDAY -->
+            <tr>
+                <td>2</td>
+                <td>06/01/2026</td>
+                <td>Tuesday</td>
+
+                <td></td>
+                <td><b>VI</b><br>LT 502</td>
+                <td><b>SE (V-RKV)</b><br>LT 502</td>
+                <td><b>CC (V-LAD)</b><br>LT 502</td>
+                <td><b>DWM</b><br>LT 502</td>
+
+                <td><b>AI (V-ABH)</b><br>LT 502</td>
+            </tr>
+
+            <!-- WEDNESDAY -->
+            <tr>
+                <td>3</td>
+                <td>07/01/2026</td>
+                <td>Wednesday</td>
+
+                <td><b>SE (V-RKV)</b><br>LT 502</td>
+
+                <!-- FSD spans Session 2 + Session 3 -->
+                <td colspan="2"><b>FSD (V-RKV)</b><br>LT 502</td>
+
+                <td><b>DWM</b><br>LT 502</td>
+                <td><b>NLP (V-NIG)</b><br>LT 502</td>
+
+                <td><b>AI (V-ABH)</b><br>LT 502</td>
+            </tr>
+
+            <!-- THURSDAY -->
+            <tr>
+                <td>4</td>
+                <td>08/01/2026</td>
+                <td>Thursday</td>
+
+                <td><b>VI</b><br>LT 502</td>
+
+                <!-- FSD spans Session 2 + Session 3 -->
+                <td colspan="2"><b>FSD (V-RKV)</b><br>LT 502</td>
+
+                <td><b>DWM</b><br>LT 502</td>
+                <td><b>NLP (V-NIG)</b><br>LT 502</td>
+
+                <td><b>AI (V-ABH)</b><br>LT 502</td>
+            </tr>
+
+            <!-- FRIDAY -->
+            <tr>
+                <td>5</td>
+                <td>09/01/2026</td>
+                <td>Friday</td>
+
+                <td><b>SE (V-RKV)</b><br>LT 502</td>
+                <td></td>
+                <td><b>FSD (V-RKV)</b><br>LT 502</td>
+                <td><b>NLP (V-NIG)</b><br>LT 502</td>
+                <td><b>VI</b><br>LT 502</td>
+
+                <td><b>CC (V-LAD)</b><br>LT 502</td>
+            </tr>
+
+        </table>
+
+    </body>
+</html>
