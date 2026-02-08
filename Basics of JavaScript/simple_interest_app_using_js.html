@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Simple Interest App using JS</title>
+        <style>
+            h1 {
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Simple Interest App</h1>
+        <script>
+            let p_amt = Number(prompt("Enter principal amount:"))
+            let time = Number(prompt("Enter time in month:"))
+            let rate = Number(prompt("Enter rate of interest:"))
+            let s_interest = p_amt * time * rate / 100;
+            document.write("Principal Amount is: " + p_amt + "<br>");
+            document.write("Time is: " + time + "<br>");
+            document.write("Rate is: " + rate + "<br>");
+            document.write("Simple Interest is: " + s_interest + "<br>");
+        </script>
+    </body>
+</html>

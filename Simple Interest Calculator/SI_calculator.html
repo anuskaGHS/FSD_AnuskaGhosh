@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <title>Simple Interest App</title>
+
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background: linear-gradient(to right, #5e60ce, #04209b);
+                font-family: Arial;
+            }
+
+            h1 {
+                text-align: center;
+                color: white;
+                margin-top: 40px;
+                font-size: 40px;
+            }
+
+            .container {
+                width: 400px;
+                background: white;
+                margin: auto;
+                margin-top: 40px;
+                padding: 30px;
+                border-radius: 15px;
+                box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
+            }
+
+            label {
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            input {
+                width: 100%;
+                padding: 10px;
+                margin-top: 5px;
+                margin-bottom: 20px;
+                font-size: 16px;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+            }
+
+            .btn {
+                width: 100%;
+                padding: 12px;
+                font-size: 18px;
+                background-color: #1f00b8;
+                border: none;
+                color: white;
+                border-radius: 8px;
+                cursor: pointer;
+                font-weight: bold;
+            }
+
+            .btn:hover {
+                background-color: #5e60ce;
+            }
+
+            .result-box {
+                margin-top: 20px;
+                background: #f5f5f5;
+                padding: 20px;
+                border-radius: 10px;
+                font-size: 18px;
+                display: none; /* hidden until calculation */
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <h1>Simple Interest Calculator</h1>
+
+        <div class="container">
+
+            <label>Enter Principal Amount</label>
+            <input id="p_amt" type="number" placeholder="Enter the principal amount" required>
+
+            <label>Enter Time in Months</label>
+            <input id="time" type="number" placeholder="Enter the time in months" required>
+
+            <label>Enter Rate of Interest</label>
+            <input id="rate" type="number" placeholder="Enter the rate of interest" required>
+
+            <button class="btn" onclick="calculate()">Calculate Simple Interest</button>
+
+            <div id="result" class="result-box"></div>
+
+        </div>
+
+        <script>
+            function calculate() {
+                let p_amt = Number(document.getElementById("p_amt").value);
+                let time = Number(document.getElementById("time").value);
+                let rate = Number(document.getElementById("rate").value);
+
+                let s_interest = p_amt * time * rate / 100;
+
+                document.getElementById("result").style.display = "block";
+
+                document.getElementById("result").innerHTML =
+                    "Principal Amount: " + p_amt + "<br>" +
+                    "Time: " + time + "<br>" +
+                    "Rate: " + rate + "<br><br>" +
+                    "<b>Simple Interest: " + s_interest + "</b>";
+            }
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,169 @@
+<html>
+    <head>
+        <title>Fruits & Company Details</title>
+
+        <style>
+            body {
+                background: linear-gradient(to right, #4b6cb7, #182848);
+                font-family: Arial;
+                margin: 0;
+                padding: 0;
+                color: white;
+                text-align: center;
+            }
+
+            h1 {
+                margin-top: 30px;
+                letter-spacing: 3px;
+            }
+
+            .container {
+                width: 80%;
+                margin: auto;
+                background: white;
+                color: black;
+                padding: 30px;
+                margin-top: 40px;
+                border-radius: 15px;
+                box-shadow: 0px 5px 20px rgba(0,0,0,0.4);
+            }
+
+            h2 {
+                color: #182848;
+            }
+
+            .section-box {
+                background: #f2f2f2;
+                padding: 20px;
+                margin-top: 15px;
+                border-radius: 10px;
+                text-align: left;
+            }
+
+            p {
+                font-size: 18px;
+                margin: 8px 0;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <h1>Fruits & Company Details (Arrays & Objects)</h1>
+
+        <div class="container">
+            
+            <!-- Fruits Section -->
+            <h2>Fruits (Using Arrays)</h2>
+            <div class="section-box">
+                <script>
+                    // Array of 10 fruits
+                    let fruits = [
+                        "Apple", "Banana", "Mango", "Orange", "Pineapple",
+                        "Grapes", "Strawberry", "Watermelon", "Papaya", "Kiwi"
+                    ];
+
+                    document.write("<b>List of Fruits:</b><br><br>");
+
+                    document.write(fruits[0] + "<br>");
+                    document.write(fruits[1] + "<br>");
+                    document.write(fruits[2] + "<br>");
+                    document.write(fruits[3] + "<br>");
+                    document.write(fruits[4] + "<br>");
+                    document.write(fruits[5] + "<br>");
+                    document.write(fruits[6] + "<br>");
+                    document.write(fruits[7] + "<br>");
+                    document.write(fruits[8] + "<br>");
+                    document.write(fruits[9] + "<br>");
+                </script>
+            </div>
+
+            <br><br>
+
+            <!-- Company Section -->
+            <h2>Company Details (Using Objects)</h2>
+            <div class="section-box">
+                <script>
+                    // Objects for 5 companies (using numeric keys as per sir's teaching)
+                    let company1 = {
+                        1: "Google",
+                        2: "Larry Page",
+                        3: 190000,
+                        4: "60 LPA",
+                        5: "California, USA"
+                    };
+
+                    let company2 = {
+                        1: "Microsoft",
+                        2: "Bill Gates",
+                        3: 230000,
+                        4: "55 LPA",
+                        5: "Washington, USA"
+                    };
+
+                    let company3 = {
+                        1: "Apple",
+                        2: "Steve Jobs",
+                        3: 160000,
+                        4: "70 LPA",
+                        5: "California, USA"
+                    };
+
+                    let company4 = {
+                        1: "Amazon",
+                        2: "Jeff Bezos",
+                        3: 1500000,
+                        4: "50 LPA",
+                        5: "Seattle, USA"
+                    };
+
+                    let company5 = {
+                        1: "Tesla",
+                        2: "Elon Musk",
+                        3: 140000,
+                        4: "65 LPA",
+                        5: "Texas, USA"
+                    };
+
+                    document.write("<b>Company 1:</b><br>");
+                    document.write("Name: " + company1[1] + "<br>");
+                    document.write("Founder: " + company1[2] + "<br>");
+                    document.write("Employees: " + company1[3] + "<br>");
+                    document.write("Avg Package: " + company1[4] + "<br>");
+                    document.write("Location: " + company1[5] + "<br><br>");
+
+                    document.write("<b>Company 2:</b><br>");
+                    document.write("Name: " + company2[1] + "<br>");
+                    document.write("Founder: " + company2[2] + "<br>");
+                    document.write("Employees: " + company2[3] + "<br>");
+                    document.write("Avg Package: " + company2[4] + "<br>");
+                    document.write("Location: " + company2[5] + "<br><br>");
+
+                    document.write("<b>Company 3:</b><br>");
+                    document.write("Name: " + company3[1] + "<br>");
+                    document.write("Founder: " + company3[2] + "<br>");
+                    document.write("Employees: " + company3[3] + "<br>");
+                    document.write("Avg Package: " + company3[4] + "<br>");
+                    document.write("Location: " + company3[5] + "<br><br>");
+
+                    document.write("<b>Company 4:</b><br>");
+                    document.write("Name: " + company4[1] + "<br>");
+                    document.write("Founder: " + company4[2] + "<br>");
+                    document.write("Employees: " + company4[3] + "<br>");
+                    document.write("Avg Package: " + company4[4] + "<br>");
+                    document.write("Location: " + company4[5] + "<br><br>");
+
+                    document.write("<b>Company 5:</b><br>");
+                    document.write("Name: " + company5[1] + "<br>");
+                    document.write("Founder: " + company5[2] + "<br>");
+                    document.write("Employees: " + company5[3] + "<br>");
+                    document.write("Avg Package: " + company5[4] + "<br>");
+                    document.write("Location: " + company5[5] + "<br><br>");
+                </script>
+            </div>
+
+        </div>
+
+    </body>
+</html>

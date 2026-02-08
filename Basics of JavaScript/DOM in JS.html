@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>DOM in JS</title>
+        <style>
+            h1{
+                text-align: center;
+                color: #043f72;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>DOM - Document Object Model</h1>
+        <p id="dom">The Document Object Model (DOM) is a programming interface (API) that represents HTML documents as a structured, hierarchical tree of nodes</p>
+
+        <p id="dom">Welcome to DOM</p>
+        <button onclick="Change()">Click Me</button>
+        
+        <script>
+            function Change() {
+                document.getElementById('dom').style.color = "red";
+                document.getElementById('dom').innerHTML = "INTRODUCTION";
+            }
+
+            // function intro(){
+            //     document.getElementById('intro').innerHTML = "INTRODUCTION";
+            // }
+        </script>
+
+    </body>
+</html>
+
+<!-- 
+Notes-
+use case - to make more responsive website.
+event handler.
+
+follows tree strcuture -
+1. html is parent node
+2. head and body are child of html
+3. title is child of head
+4. h1, p are child of body
+
+==> To change color of text-
+document.getElementById('dom').style.color = "red";      (this will change original text color with the one under quotes "")
+
+==> To change the text -
+document.getElementById('dom').textContent = "Hello World";  (this will change original text with the one under quotes "")
+
+
+
+-->

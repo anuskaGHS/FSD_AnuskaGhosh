@@ -1,0 +1,53 @@
+body {
+    margin: 0px;
+    background: url(./food_cafe_background.webp);
+    background-size: cover;
+}
+
+.navbar {
+    background-color: black;
+    color: white;
+    display: flex;
+    padding: 2px 20px;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin-left: auto;  /* pushes menu to the right */
+    cursor: pointer;
+}
+
+.nav-links li {
+    padding: 10px;
+}
+
+form {
+    width: 400px;
+    height: 150px;
+    text-align: center;
+    margin-top: 120px;
+    background-color: rgb(0,0,0);
+    opacity: 80%;
+    color: white;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    border-radius: 10px;
+}
+button {
+    margin-top: 20px;
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: rgb(222, 92, 22)
+}

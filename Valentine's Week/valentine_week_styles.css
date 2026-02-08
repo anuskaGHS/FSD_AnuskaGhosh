@@ -1,0 +1,202 @@
+/* Background and Page Layout */
+body {
+    margin: 0;
+    padding: 0;
+    background: url(./valentines_week.webp);
+    font-family: 'Arial';
+    text-align: center;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #ffb6d9;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #a8004f;
+    box-shadow: 0 0 20px #ffa7cf;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.navbar li {
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.navbar li:hover {
+    background: white;
+    color: #ff2e96;
+    box-shadow: 0 0 10px white;
+}
+
+/* Marquee Banner */
+marquee {
+    font-size: 38px;
+    padding: 15px;
+    color: #ff2e96;
+    font-weight: bold;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #ffc3dd;
+}
+
+/* Main Box Styling */
+.box {
+    width: 430px;
+    background: rgba(255, 255, 255, 0.75);
+    margin: auto;
+    margin-top: 50px;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(255, 160, 190, 0.5);
+    backdrop-filter: blur(7px);
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Labels */
+label {
+    font-size: 22px;
+    font-weight: bold;
+    color: #c23b7c;
+    text-shadow: 0 0 8px #ffb7d4;
+}
+
+/* Input Box */
+input {
+    width: 90%;
+    padding: 12px;
+    font-size: 18px;
+    margin-top: 12px;
+    border-radius: 12px;
+    border: 2px solid #ff9ac0;
+    background: #fff0f6;
+    box-shadow: inset 0 0 10px #ffd2e4;
+}
+
+/* Button */
+button {
+    width: 95%;
+    padding: 14px;
+    margin-top: 25px;
+    background-color: #ff2e96;
+    color: white;
+    font-size: 19px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 0 12px #ff8ec9;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #d41470;
+    box-shadow: 0 0 20px #ff5eb6;
+}
+
+/* Reset Button */
+#resetBtn {
+    background-color: #ffd1e6;
+    color: #a8004f;
+    margin-top: 10px;
+    box-shadow: 0 0 12px #ffdef0;
+}
+
+#resetBtn:hover {
+    background-color: #ffb6d9;
+    box-shadow: 0 0 20px #ff73b6;
+}
+
+/* Result Box */
+#result {
+    margin-top: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 25px;
+    border-radius: 15px;
+    display: none;
+    opacity: 0;
+}
+
+/* Animated Reveal */
+.animate {
+    animation: loveReveal 1.3s ease-out forwards;
+}
+
+@keyframes loveReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(25px) scale(0.9);
+        letter-spacing: -2px;
+    }
+    40% {
+        opacity: 1;
+        transform: translateY(0px) scale(1.08);
+        letter-spacing: 2px;
+    }
+    70% {
+        transform: scale(1);
+        letter-spacing: 1px;
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        letter-spacing: 0px;
+    }
+}
+
+/* Day Themes */
+.rose { 
+    background:#ffe3ef; 
+    color:#b31253; 
+    box-shadow:0 0 30px #ff99c8; 
+}
+.propose { 
+    background:#fff3d8; 
+    color:#a87400; 
+    box-shadow:0 0 30px #ffdc8a; 
+}
+.chocolate { 
+    background:#f5e5c8; 
+    color:#4a2d15; 
+    box-shadow:0 0 30px #c3a476; 
+}
+.teddy { 
+    background:#ffe9f6; 
+    color:#d9438d; 
+    box-shadow:0 0 30px #ffb5df; 
+}
+.promise { 
+    background:#e2f2ff; 
+    color:#043a83; 
+    box-shadow:0 0 30px #94c8ff; 
+}
+.kiss { 
+    background:#ffd6df; 
+    color:#a1002d; 
+    box-shadow:0 0 30px #ff7e9a; 
+}
+.valentine { 
+    background:#ffe0eb; 
+    color:#c2185b; 
+    box-shadow:0 0 35px #ff94c7; 
+}
+.invalid { 
+    background:#ececec; 
+    color:#555; 
+    box-shadow:0 0 20px #999; 
+}

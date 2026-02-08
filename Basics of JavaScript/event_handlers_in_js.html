@@ -1,0 +1,163 @@
+<html>
+    <head>
+        <title>Event Handlers in JS</title>
+
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background: #022641;
+                font-family: "Segoe UI", sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+            }
+
+            .container {
+                width: 350px;
+                background: white;
+                padding: 30px;
+                border-radius: 12px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+                text-align: center;
+            }
+
+            h1 {
+                margin-bottom: 25px;
+                color: #003366;
+                font-size: 24px;
+            }
+
+            label {
+                float: left;
+                font-weight: bold;
+                margin-top: 10px;
+                color: #333;
+            }
+
+            input {
+                width: 100%;
+                padding: 12px;
+                margin-top: 5px;
+                margin-bottom: 15px;
+                border-radius: 6px;
+                border: 2px solid #ddd;
+                font-size: 15px;
+            }
+
+            button {
+                width: 48%;
+                padding: 12px;
+                font-size: 16px;
+                border-radius: 6px;
+                border: none;
+                cursor: pointer;
+                font-weight: bold;
+                transition: 0.2s;
+            }
+
+            .loginBtn {
+                background: #4da6ff;
+                color: black;
+            }
+            .loginBtn:hover {
+                background: #1a8cff;
+            }
+
+            .resetBtn {
+                background: #e6e6e6;
+                color: black;
+            }
+            .resetBtn:hover {
+                background: #cccccc;
+            }
+
+            #result {
+                margin-top: 20px;
+                font-size: 18px;
+                font-weight: bold;
+                display: none;
+            }
+
+            /* Success & Error Colors */
+            .success {
+                color: #0f8a41;
+            }
+            .error {
+                color: #c30000;
+            }
+
+            /* POP ANIMATION */
+            .pop {
+                animation: popEffect 0.5s ease forwards;
+            }
+
+            @keyframes popEffect {
+                0% { 
+                    opacity: 0; 
+                    transform: scale(0.3); 
+                }
+                60% { 
+                    opacity: 1; 
+                    transform: scale(1.15); 
+                }
+                100% { 
+                    transform: scale(1); 
+                }
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <div class="container">
+            <h1>Event Handlers in JavaScript</h1>
+            <h1>Login Form</h1>
+
+            <label>Username:</label>
+            <input type="text" id="username">
+
+            <label>Password:</label>
+            <input type="password" id="password">
+
+            <button class="loginBtn" onclick="Event()">Log In</button>
+            <button class="resetBtn" onclick="Reset()">Reset</button>
+
+            <p id="result"></p>
+        </div>
+
+
+        <script>
+            function Event() {
+                var Username = document.getElementById("username").value;
+                var Password = document.getElementById("password").value;
+                var result = document.getElementById("result");
+
+                // Reset animation for pop effect
+                result.className = "";
+                void result.offsetWidth;
+
+                if (Username === "Anuska" && Password === "123") {
+                    result.innerHTML = "Login Successful!!";
+                    result.className = "success pop";
+                } else {
+                    result.innerHTML = "Invalid Username or Password";
+                    result.className = "error pop";
+                }
+
+                result.style.display = "block";
+            }
+
+            function Reset() {
+                document.getElementById("username").value = "";
+                document.getElementById("password").value = "";
+                var result = document.getElementById("result");
+                result.style.display = "none";
+                result.innerHTML = "";
+            }
+        </script>
+    
+    </body>
+</html>

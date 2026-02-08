@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Functions in JS</title>
+    </head>
+
+    <body>
+        <h1>Functions in JavaScript</h1>
+        <h2>Normal Functions</h2>
+        <script>
+            function sum() {
+                return "Anuska";
+            };
+            document.write(sum());
+        </script>
+
+        <h2>Parameter or Argument Functions</h2>
+        <script>
+            function sum(a,b){
+                return a+b;
+            };
+            document.write(sum(100,200));
+        </script>
+
+        <h2>Parameters with Values Functions</h2>
+        <script>
+           function sum(a = 100, b = 200){
+                return a+b;
+            };
+            document.write(sum()); 
+        </script>
+
+        <h2>Arrow Functions</h2>
+        <script>
+            let sample = () => {
+                return "Anuska"
+            };
+            document.write(sample());
+        </script>
+
+        <h2>Arrow Functions with Values</h2>
+        <script>
+            let sample2 = (a="Anuska", b="Ghosh") => {
+                return a + " " + b
+            };
+            document.write(sample2());
+        </script>
+    </body>
+</html>

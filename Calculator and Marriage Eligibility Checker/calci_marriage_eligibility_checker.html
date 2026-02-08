@@ -1,0 +1,202 @@
+<html>
+<head>
+    <title>Calculator and Marriage Eligibility Checker using Arrow Function</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #4b6cb7, #182848);
+            font-family: Arial;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 35px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+        
+        .app-container {
+            width: 450px;
+            background: white;
+            color: black;
+            margin: auto;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
+        }
+
+        label {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+            background-color: #182848;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+
+        .btn:hover {
+            background-color: #4b6cb7;
+        }
+
+        .result-box {
+            margin-top: 15px;
+            background: #f2f2f2;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 18px;
+            display: none;
+        }
+
+        hr {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            border: 1px solid white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Calculator and Marriage Eligibility Checker</h1>
+
+    <!-- -------------------- CALCULATOR APP -------------------- -->
+    <div class="app-container">
+        <h2>Calculator (Arrow Function)</h2>
+
+        <label>Enter First Number</label>
+        <input id="num1" type="number">
+
+        <label>Enter Second Number</label>
+        <input id="num2" type="number">
+
+        <label>Select Operator</label>
+        <select id="operator">
+            <option value="+"> + (Addition) </option>
+            <option value="-"> - (Subtraction) </option>
+            <option value="*"> * (Multiplication) </option>
+            <option value="/"> / (Division) </option>
+            <option value="%"> % (Remainder) </option>
+        </select>
+
+        <button class="btn" onclick="calculateResult()">Calculate</button>
+
+        <div id="calc_result" class="result-box"></div>
+    </div>
+
+    <hr>
+
+    <!-- -------------------- MARRIAGE ELIGIBILITY APP -------------------- -->
+    <div class="app-container">
+        <h2>Marriage Eligibility Checker (Arrow Function)</h2>
+
+        <label>Enter Age</label>
+        <input id="age" type="number">
+
+        <label>Enter Gender (M / F)</label>
+        <input id="gender" type="text">
+
+        <button class="btn" onclick="checkEligibility()">Check Eligibility</button>
+
+        <div id="eligibility_result" class="result-box"></div>
+    </div>
+
+    <script>
+
+        /* ---------------- Calculator using Arrow Function ---------------- */
+        let calculate = (a, b, op) => {
+
+            if (op == "+") {
+                return a + b;
+            }
+            else if (op == "-") {
+                return a - b;
+            }
+            else if (op == "*") {
+                return a * b;
+            }
+            else if (op == "/") {
+                return a / b;
+            }
+            else if (op == "%") {
+                return a % b;
+            }
+        };
+
+        function calculateResult() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            let op = document.getElementById("operator").value;
+
+            let ans = calculate(a, b, op);
+
+            document.getElementById("calc_result").style.display = "block";
+            document.getElementById("calc_result").innerHTML = 
+                "<b>Result: </b>" + ans;
+        }
+
+
+        /* ----------- Marriage Eligibility Checker using Arrow Function ----------- */
+        let check = (age, gender) => {
+
+            if (gender == "M" || gender == "m" || gender == "Male" || gender == "male") {
+                if (age >= 21) {
+                    return "Eligible for Marriage";
+                } else {
+                    return "Not Eligible for Marriage";
+                }
+            }
+
+            else if (gender == "F" || gender == "f" || gender == "Female" || gender == "female") {
+                if (age >= 18) {
+                    return "Eligible for Marriage";
+                } else {
+                    return "Not Eligible for Marriage";
+                }
+            }
+
+            else {
+                return "Invalid Gender Entered";
+            }
+        };
+
+        function checkEligibility() {
+            let age = Number(document.getElementById("age").value);
+            let gender = document.getElementById("gender").value;
+
+            let ans = check(age, gender);
+
+            document.getElementById("eligibility_result").style.display = "block";
+            document.getElementById("eligibility_result").innerHTML =
+                "<b>Result: </b>" + ans;
+        }
+
+    </script>
+
+</body>
+</html>

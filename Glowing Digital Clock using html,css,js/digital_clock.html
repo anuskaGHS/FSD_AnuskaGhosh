@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Digital Clock</title>
+        <link rel="stylesheet" href="digital_clock_styles.css">
+    </head>
+
+    <body>
+
+        <h1>GLOWING DIGITAL CLOCK</h1>
+
+        <div class="clock-box">
+            <h2 id="clock">00:00:00</h2>
+        </div>
+
+        <script>
+            function Time() {
+                let now = new Date();
+                let h = now.getHours();
+                let m = now.getMinutes();
+                let s = now.getSeconds();
+
+                if (h < 10) h = "0" + h;
+                if (m < 10) m = "0" + m;
+                if (s < 10) s = "0" + s;
+
+                document.getElementById("clock").textContent = 
+                    h + ":" + m + ":" + s;
+            }
+
+            setInterval(Time, 1000);
+            Time();
+        </script>
+
+    </body>
+</html>

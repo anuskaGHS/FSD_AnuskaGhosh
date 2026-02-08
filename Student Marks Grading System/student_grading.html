@@ -1,0 +1,317 @@
+<html>
+    <head>
+        <title>Student Marks Grading System</title>
+        <link rel="stylesheet" href="grading_style.css">
+    </head>
+
+    <body>
+
+        <!-- Navigation Bar -->
+        <div class="navbar">
+            <li>Home</li>
+            <li>Grades</li>
+            <li>Topper</li>
+            <li>Contact</li>
+        </div>
+
+        <h1>Student Marks Grading System</h1>
+
+        <!-- Student Database List -->
+        <div class="student-list">
+            <h2>Available Student Records</h2>
+
+            <table>
+                <tr>
+                    <th>Reg Number</th>
+                    <th>Name</th>
+                </tr>
+
+                <tr>
+                    <td>101</td>
+                    <td>Aashika Ganguly</td>
+                </tr>
+                <tr>
+                    <td>102</td>
+                    <td>Amaan Ahmed</td>
+                </tr>
+                <tr>
+                    <td>103</td>
+                    <td>Arjun Menon</td>
+                </tr>
+                <tr>
+                    <td>104</td>
+                    <td>Nikita Reddy</td>
+                </tr>
+                <tr>
+                    <td>105</td>
+                    <td>Saanvi Sharma</td>
+                </tr>
+                <tr>
+                    <td>106</td>
+                    <td>Rohit Verma</td>
+                </tr>
+                <tr>
+                    <td>107</td>
+                    <td>Isha Mehta</td>
+                </tr>
+                <tr>
+                    <td>108</td>
+                    <td>Karan Patel</td>
+                </tr>
+                <tr>
+                    <td>109</td>
+                    <td>P​riya Nair</td>
+                </tr>
+                <tr>
+                    <td>110</td>
+                    <td>Vishal Rao</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <!-- FORM BOX -->
+        <div class="box">
+
+            <label>Enter Student Registration Number:</label><br>
+            <input id="reg" type="text" placeholder="Example: 101 / 102 / ..."><br><br>
+
+            <button onclick="calculateGrade()">Submit</button>
+            <button id="resetBtn" onclick="resetAll()">Reset</button>
+
+            <div id="output"></div>
+
+            <div id="topper"></div>
+
+        </div>
+
+
+
+    <script>
+
+        /* Student Database WITH MARKS Included */
+        let students = [
+
+            {
+                reg: "101",
+                name: "Aashika Ganguly",
+                sem: 4,
+                course: "BCA",
+                marks: 99,
+                photo: "student1.png"
+            },
+
+            {
+                reg: "102",
+                name: "Amaan Ahmed",
+                sem: 4,
+                course: "BCA",
+                marks: 86,
+                photo: "student2.png"
+            },
+
+            {
+                reg: "103",
+                name: "Arjun Menon",
+                sem: 4,
+                course: "BCA",
+                marks: 92,
+                photo: "student3.png"
+            },
+
+            {
+                reg: "104",
+                name: "Nikita Reddy",
+                sem: 4,
+                course: "BCA",
+                marks: 75,
+                photo: "student4.png"
+            },
+
+            {
+                reg: "105",
+                name: "Saanvi Sharma",
+                sem: 4,
+                course: "BCA",
+                marks: 83,
+                photo: "student5.png"
+            },
+
+            {
+                reg: "106",
+                name: "Rohit Verma",
+                sem: 4,
+                course: "BCA",
+                marks: 68,
+                photo: "student6.png"
+            },
+
+            {
+                reg: "107",
+                name: "Isha Mehta",
+                sem: 4,
+                course: "BCA",
+                marks: 95,
+                photo: "student7.png"
+            },
+
+            {
+                reg: "108",
+                name: "Karan Patel",
+                sem: 4,
+                course: "BCA",
+                marks: 54,
+                photo: "student8.png"
+            },
+
+            {
+                reg: "109",
+                name: "Priya Nair",
+                sem: 4,
+                course: "BCA",
+                marks: 88,
+                photo: "student9.png"
+            },
+
+            {
+                reg: "110",
+                name: "Vishal Rao",
+                sem: 4,
+                course: "BCA",
+                marks: 61,
+                photo: "student10.png"
+            }
+
+        ];
+
+
+
+        /* Get Student Details by Reg No */
+        function getStudent(reg) {
+            return students.find(student => student.reg == reg) || null;
+        }
+
+
+
+        /* Grade Calculation (Nested If–Else) */
+        function getGrade(marks) {
+
+            if (marks >= 95) {
+                return "O";
+            }
+            else if (marks >= 90) {
+                return "A+";
+            }
+            else if (marks >= 85) {
+                return "A";
+            }
+            else if (marks >= 80) {
+                return "B+";
+            }
+            else if (marks >= 75) {
+                return "B";
+            }
+            else if (marks >= 70) {
+                return "C+";
+            }
+            else if (marks >= 65) {
+                return "C";
+            }
+            else if (marks >= 60) {
+                return "D";
+            }
+            else {
+                return "FAIL";
+            }
+        }
+
+
+
+        /* Main Function */
+        function calculateGrade() {
+
+            let reg = document.getElementById("reg").value;
+
+            let student = getStudent(reg);
+
+            let output = document.getElementById("output");
+            output.style.display = "block";
+
+            /* Student not found */
+            if (student == null) {
+                output.innerHTML = `<p class="invalid">❌ Student Not Found!</p>`;
+                document.getElementById("topper").innerHTML = "";
+                return;
+            }
+
+            let marks = student.marks;
+            let grade = getGrade(marks);
+
+            /* Grade Color Style */
+            let gradeColor = "grade-normal";
+
+            if (grade == "O") gradeColor = "grade-o";
+            else if (grade == "A+") gradeColor = "grade-aplus";
+            else if (grade == "A") gradeColor = "grade-a";
+            else if (grade == "FAIL") gradeColor = "grade-fail";
+
+
+
+            /* Display Student Details */
+            output.innerHTML = `
+                <h2 class="title-animate">Student Profile</h2>
+
+                <img src="${student.photo}", class="student-pic">
+
+                <p><b>Registration Number:</b> ${student.reg}</p>
+                <p><b>Name:</b> ${student.name}</p>
+                <p><b>Course:</b> ${student.course}</p>
+                <p><b>Semester:</b> ${student.sem}</p>
+                <p><b>Marks:</b> ${marks}</p>
+
+                <p class="grade-box ${gradeColor}">
+                    Grade Achieved: <b>${grade}</b>
+                </p>
+            `;
+
+            showTopper();
+        }
+
+
+
+        /* Dynamic Topper Calculation */
+        function showTopper() {
+
+            let topper = students[0];
+
+            for (let i = 1; i < students.length; i++) {
+                if (students[i].marks > topper.marks) {
+                    topper = students[i];
+                }
+            }
+
+            document.getElementById("topper").innerHTML = `
+                <h3 class="topper-title">🏆 Class Topper</h3>
+
+                <p><b>Name:</b> ${topper.name}</p>
+                <p><b>Marks:</b> ${topper.marks}</p>
+                <p><b>Grade:</b> ${getGrade(topper.marks)}</p>
+            `;
+        }
+
+
+
+        /*Reset Function */
+        function resetAll() {
+
+            document.getElementById("reg").value = "";
+            document.getElementById("output").innerHTML = "";
+            document.getElementById("topper").innerHTML = "";
+            document.getElementById("output").style.display = "none";
+
+        }
+
+    </script>
+
+    </body>
+</html>

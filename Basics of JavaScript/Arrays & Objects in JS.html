@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Arrays & Objects in JS</title>
+    </head>
+
+    <body>
+        <h1>Arrays & Objects in JS</h1>
+
+        <h1>Arrays in JS</h1>
+        <script>
+            document.write("Sample Array - "+"<BR>")
+            let array = [10,20,30,40,50];
+            document.write("Array is : "+array+"<BR>");
+    
+            document.write("Heterogenous Array - "+"<BR>")
+            let hetero_array = [1,"String",7.999,12000];
+            document.write("Heterogenous Array is : "+hetero_array+"<BR>");
+
+            let student_details = [121,"Name",9.5,"BCA","Alliance University","Bangalore","A+"];
+            student_details[2] = 9.8;
+
+            document.write("Student Reg No. : "+student_details[0]+"<BR>");
+            document.write("Student Name : "+student_details[1]+"<BR>");
+            document.write("Student CGPA : "+student_details[2]+"<BR>");
+            document.write("Student Course : "+student_details[3]+"<BR>");
+            document.write("Student College Name : "+student_details[4]+"<BR>");
+            document.write("Student College Location : "+student_details[5]+"<BR>");
+            document.write("Student Grade : "+student_details[6]+"<BR>");
+        </script>
+        <br>
+
+        <h1>Objects in JS</h1>
+        <script>
+            let mobile = {1:"One Plus",
+                          2: "Black",
+                          3: 300000,
+                          4: "128 GB",
+                          5: "6GB Ram",
+            };
+            mobile[1] = "Samsung";
+            document.write("Mobile details - "+"<BR><BR>");
+            document.write("Mobile Brand Name - "+mobile[1]+"<BR>");
+            document.write("Mobile Colour - "+mobile[2]+"<BR>");
+            document.write("Mobile Price - "+mobile[3]+"<BR>");
+            document.write("Mobile Storage(in GB) - "+mobile[4]+"<BR>");
+            document.write("Mobile Ram - "+mobile[5]+"<BR>");
+
+        </script>
+
+    </body>
+</html>
+
+<!-- 
+Notes -
+Arrays - An array is an arrangement of numbers, pictures or objects formatted into rows and columns according to their type. 
+In coding and programming, an array is a collection of items, or data, stored in contiguous memory locations, also known as database systems.
+
+
+ -->

@@ -1,0 +1,223 @@
+/* ============================
+   PROFESSIONAL STUDENT THEME
+   ============================ */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #f2f2f2;
+    text-align: center;
+    font-family: "Segoe UI", Arial;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #003366;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 18px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.navbar li {
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.navbar li:hover {
+    background: #4da6ff;
+    color: black;
+}
+
+/* TITLE */
+h1 {
+    margin-top: 30px;
+    color: #003366;
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+/* ============================
+   STUDENT LIST TABLE
+   ============================ */
+
+.student-list {
+    width: 500px;
+    margin: auto;
+    margin-top: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.12);
+}
+
+.student-list h2 {
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* CENTER ALIGN COLUMN TEXT */
+th, td {
+    text-align: center;
+}
+
+th {
+    background: #003366;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    background: #f4f8ff;
+    border-bottom: 1px solid #d0d7e2;
+    color: #003366;
+    font-weight: bold;
+}
+
+tr:hover td {
+    background: #e8f2ff;
+}
+
+/* MAIN FORM BOX */
+.box {
+    width: 480px;
+    margin: auto;
+    margin-top: 40px;
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.15);
+    text-align: left;
+}
+
+/* LABELS */
+label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+}
+
+/* INPUTS */
+input {
+    width: 95%;
+    padding: 12px;
+    font-size: 16px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 2px solid #ccc;
+    background: white;
+}
+
+/* BUTTONS */
+button {
+    width: 48%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #4da6ff;
+    color: black;
+    font-size: 17px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #1a8cff;
+}
+
+#resetBtn {
+    background-color: #e6e6e6;
+    color: #333;
+}
+
+#resetBtn:hover {
+    background-color: #cccccc;
+}
+
+/* OUTPUT BOX */
+#output {
+    margin-top: 25px;
+    display: none;
+    padding: 20px;
+    background: #f7faff;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    text-align: center;
+    font-size: 18px;
+}
+
+/* PERFECT CIRCLE PROFILE FIX */
+.student-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid #003366;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin: 0 auto 15px auto;
+    background-color: white;
+}
+
+
+/* GRADE COLORS */
+.grade-box {
+    padding: 12px;
+    border-radius: 6px;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.grade-o { 
+    background:#d4edda; 
+    color:#155724; 
+}
+.grade-aplus { 
+    background:#e2f0d9; 
+    color:#1e4620; 
+}
+.grade-a { 
+    background:#e7f3fe; 
+    color:#0b5394; 
+}
+.grade-normal { 
+    background:#fff3cd; 
+    color:#7a5e00; 
+}
+.grade-fail { 
+    background:#f8d7da; 
+    color:#721c24; 
+}
+
+/* TOPPER SECTION */
+#topper {
+    margin-top: 25px;
+    padding: 15px;
+    background: #e9f2ff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-size: 17px;
+}
+
+.topper-title {
+    color: #003366;
+    margin-bottom: 8px;
+    font-size: 22px;
+}

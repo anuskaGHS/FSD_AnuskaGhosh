@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <title>Valentine's Week Project</title>
+        <link rel="stylesheet" href="valentine_week_styles.css">
+    </head>
+
+    <body>
+
+        <!-- 🌸 Navigation Bar -->
+        <div class="navbar">
+            <li>Home</li>
+            <li>About</li>
+            <li>Valentine Week</li>
+            <li>Contact</li>
+        </div>
+
+        <!-- MOVING BANNER -->
+        <marquee>💘💞 Happy Valentine's Week!! 💖💐</marquee>
+
+        <div class="box">
+            <label>Enter the day (1 - 7)</label><br>
+
+            <input id="day" type="number" placeholder="Enter a number between 1 to 7">
+
+            <button onclick="checkDay()">Show My Valentine Day</button>
+
+            <!-- Reset Button -->
+            <button id="resetBtn" onclick="resetVal()">Reset</button>
+
+            <div id="result"></div>
+        </div>
+
+
+        <!-- ⭐ Updated Script With SWITCH CASE ⭐ -->
+        <script>
+
+            // Function using switch-case
+            let check = (d) => {
+
+                switch(d) {
+                    case 1:
+                        return ["Happy Rose Day! 🌹", "rose"];
+
+                    case 2:
+                        return ["Happy Propose Day! 💍", "propose"];
+
+                    case 3:
+                        return ["Happy Chocolate Day! 🍫", "chocolate"];
+
+                    case 4:
+                        return ["Happy Teddy Day! 🧸", "teddy"];
+
+                    case 5:
+                        return ["Happy Promise Day! 🤝", "promise"];
+
+                    case 6:
+                        return ["Happy Kiss Day! 💋", "kiss"];
+
+                    case 7:
+                        return ["Happy Valentine's Day! ❤️", "valentine"];
+
+                    default:
+                        return ["💔 Uh-oh! Valentine's Week ended… but love never ends! 💞", "invalid"];
+                }
+            };
+
+            // Main function to display result
+            function checkDay() {
+                let d = Number(document.getElementById("day").value);
+                let output = check(d);
+
+                let msg = output[0];
+                let theme = output[1];
+
+                let result = document.getElementById("result");
+
+                result.style.display = "block";
+                result.innerHTML = msg;
+
+                result.className = "";
+                void result.offsetWidth;
+
+                result.classList.add("animate");
+                result.classList.add(theme);
+            }
+
+            // Reset function
+            function resetVal() {
+                document.getElementById("day").value = "";
+                let result = document.getElementById("result");
+
+                result.style.display = "none";
+                result.className = "";
+                result.innerHTML = "";
+            }
+
+        </script>
+
+    </body>
+</html>
